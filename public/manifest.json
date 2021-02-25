@@ -1,0 +1,15 @@
+{
+  "short_name": "My Socialmedia",
+  "name": "tim0_12432 - my Socialmedia",
+  "icons": [
+    {
+      "src": "logo.jpeg",
+      "sizes": "256x256 128x128 64x64 32x32 24x24 16x16",
+      "type": "image/jpeg"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#cf352eff",
+  "background_color": "#333"
+}

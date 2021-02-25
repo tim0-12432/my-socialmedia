@@ -1,0 +1,11 @@
+.circle_layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+
+    .circle {
+        height: 500px;
+        width: 500px;
+    }
+}
