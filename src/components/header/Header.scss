@@ -32,6 +32,11 @@
                 letter-spacing: 1px;
                 text-shadow: 0px 15px 35px rgba(0, 0, 0, .5);
             }
+            @media (min-width: 1450px) {
+                a, a:visited {
+                    font-size: 45px;
+                }
+            }
         }
     }
     h1 {
@@ -40,6 +45,11 @@
         text-transform: uppercase;
         text-shadow: 0px 15px 35px rgba(0, 0, 0, .5);
         z-index: 12;
+    }
+    @media (min-width: 1900px) {
+        h1 {
+            font-size: 255px;
+        }
     }
     .theme__btn {
         position: absolute;
@@ -64,6 +74,11 @@
             }
             &:nth-child(3) {
                 display: none;
+            }
+        }
+        @media (min-width: 1450px) {
+            i {
+                font-size: 45px;
             }
         }
     }

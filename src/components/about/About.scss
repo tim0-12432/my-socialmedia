@@ -11,4 +11,9 @@
         align-self: flex-start;
         z-index: 12;
     }
+    @media (min-width: 1620px) {
+        h2 {
+            font-size: 145px;
+        }
+    }
 }
