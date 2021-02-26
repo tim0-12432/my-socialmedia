@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/my-socialmedia/static/css/main.ee9228d9.chunk.css",
-    "main.js": "/my-socialmedia/static/js/main.8104a856.chunk.js",
-    "main.js.map": "/my-socialmedia/static/js/main.8104a856.chunk.js.map",
+    "main.css": "/my-socialmedia/static/css/main.7a492b1c.chunk.css",
+    "main.js": "/my-socialmedia/static/js/main.f56671de.chunk.js",
+    "main.js.map": "/my-socialmedia/static/js/main.f56671de.chunk.js.map",
     "runtime-main.js": "/my-socialmedia/static/js/runtime-main.94cfcf7d.js",
     "runtime-main.js.map": "/my-socialmedia/static/js/runtime-main.94cfcf7d.js.map",
     "static/js/2.3d16f960.chunk.js": "/my-socialmedia/static/js/2.3d16f960.chunk.js",
     "static/js/2.3d16f960.chunk.js.map": "/my-socialmedia/static/js/2.3d16f960.chunk.js.map",
     "index.html": "/my-socialmedia/index.html",
-    "static/css/main.ee9228d9.chunk.css.map": "/my-socialmedia/static/css/main.ee9228d9.chunk.css.map",
+    "static/css/main.7a492b1c.chunk.css.map": "/my-socialmedia/static/css/main.7a492b1c.chunk.css.map",
     "static/js/2.3d16f960.chunk.js.LICENSE.txt": "/my-socialmedia/static/js/2.3d16f960.chunk.js.LICENSE.txt",
     "static/media/discord.d42e6973.jpeg": "/my-socialmedia/static/media/discord.d42e6973.jpeg",
     "static/media/snapchat.17f69939.png": "/my-socialmedia/static/media/snapchat.17f69939.png",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.94cfcf7d.js",
     "static/js/2.3d16f960.chunk.js",
-    "static/css/main.ee9228d9.chunk.css",
-    "static/js/main.8104a856.chunk.js"
+    "static/css/main.7a492b1c.chunk.css",
+    "static/js/main.f56671de.chunk.js"
   ]
 }
