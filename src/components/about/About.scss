@@ -6,9 +6,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     h2 {
-        align-self: flex-start;
+        justify-self: flex-start;
         z-index: 12;
     }
     @media (min-width: 1620px) {

@@ -9,12 +9,15 @@ export default class Header extends Component {
         const currentClasses = document.body.classList.value;
         if (currentClasses === "dark-theme") {
             document.body.classList.add("light-theme");
+            localStorage.setItem("tim0.theme", "light-theme");
             document.body.classList.remove("dark-theme");
         } else if (currentClasses === "light-theme") {
             document.body.classList.add("dark-theme");
+            localStorage.setItem("tim0.theme", "dark-theme");
             document.body.classList.remove("light-theme");
         } else {
             document.body.classList.add("dark-theme");
+            localStorage.setItem("tim0.theme", "dark-theme");
         }
     }
 

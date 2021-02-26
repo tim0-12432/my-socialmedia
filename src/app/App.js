@@ -8,9 +8,10 @@ function App() {
 
   function initTheme() {
     const prefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
-    if (!prefersDarkTheme.matches) {
-      document.body.classList.add("light-theme");
+    if (localStorage.getItem("tim0.theme") !== "") {
+      document.body.classList.add(localStorage.getItem("tim0.theme"));
     } else {
+      localStorage.setItem("tim0.theme", "dark-theme");
       document.body.classList.add("dark-theme");
     }
   }
