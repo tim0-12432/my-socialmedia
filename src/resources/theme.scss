@@ -33,6 +33,7 @@ h2 {
     width: 20px;
     height: 20px;
     transition: .5s;
+    z-index: 50;
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 8px;
@@ -40,9 +41,11 @@ h2 {
     border-top: 3px solid $font;
     border-bottom: 3px solid $font;
     transition: .5s;
+    z-index: 50;
 }
 ::-webkit-scrollbar-track{
     background: $bg2;
+    z-index: 50;
 }
 
 @mixin glass {

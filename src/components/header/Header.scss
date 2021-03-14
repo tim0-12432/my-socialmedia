@@ -61,6 +61,7 @@
         border-bottom: 0 solid transparent;
         transition: border .3s ease-in-out;
         z-index: 12;
+        display: none;
 
         &:hover {
             border-bottom: 3px solid $font;

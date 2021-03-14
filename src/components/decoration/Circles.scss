@@ -1,3 +1,5 @@
+@import "./../../resources/theme.scss";
+
 .circle_layer {
     position: absolute;
     top: 0;
@@ -7,5 +9,7 @@
     .circle {
         height: 500px;
         width: 500px;
+        z-index: 30;
+        background: $primary;
     }
 }
