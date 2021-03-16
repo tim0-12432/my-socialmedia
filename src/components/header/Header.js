@@ -1,58 +1,19 @@
-import { Component } from "react";
-import { Parallax } from "react-parallax";
-import { Link } from "react-scroll";
-import './Header.scss';
-import wallpaper from './../../resources/images/wallpaper.jpeg';
+import Typewriter from "typewriter-effect";
 
-export default class Header extends Component {
-    handleThemeButtonClick() {
-        const currentClasses = document.body.classList.value;
-        if (currentClasses === "dark-theme") {
-            document.body.classList.add("light-theme");
-            localStorage.setItem("tim0.theme", "light-theme");
-            document.body.classList.remove("dark-theme");
-        } else if (currentClasses === "light-theme") {
-            document.body.classList.add("dark-theme");
-            localStorage.setItem("tim0.theme", "dark-theme");
-            document.body.classList.remove("light-theme");
-        } else {
-            document.body.classList.add("dark-theme");
-            localStorage.setItem("tim0.theme", "dark-theme");
-        }
-    }
+import styles from "./Header.module.scss";
 
-    render() {
-        return (
-            <section id="header">
-                <Parallax bgImage={ wallpaper } blur={{ min: -10, max: 10 }} strength={ 300 }>
-                    <div className="header__container">
-                        <ul className="linklist">
-                            <li><Link
-                                to="about"
-                                activeClass="active"
-                                spy={ true }
-                                smooth={ true }
-                                offset={ 0 }
-                                duration={ 500 }
-                            >About me</Link></li>
-                            <li><Link
-                                to="social"
-                                activeClass="active"
-                                spy={ true }
-                                smooth={ true }
-                                offset={ 0 }
-                                duration={ 700 }
-                            >Socialmedia</Link></li>
-                        </ul>
-                        <h1>Tim0_12432</h1>
-                        <div className="theme__btn" onClick={ this.handleThemeButtonClick }>
-                            <i className="fa fa-moon" aria-hidden="true"></i>
-                            <i className="fa fa-toggle-on" aria-hidden="true"></i>
-                            <i className="fa fa-toggle-off" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </Parallax>
-            </section>
-        );
-    }
+function Header({ setStartReady }) {
+    return (
+        <header className={ styles.header }>
+            <h1><Typewriter onInit={(typewriter) => {
+                typewriter.typeString("Hi!").pauseFor(200).deleteAll()
+                        .typeString("My name is Timo!").pauseFor(1500).deleteAll()
+                        .typeString("Have a look at the pages down below!")
+                        .callFunction(() => setStartReady())
+                        .start();
+            }} /></h1>
+        </header>
+    );
 }
+
+export default Header;
