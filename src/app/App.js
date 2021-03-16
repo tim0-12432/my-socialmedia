@@ -16,16 +16,14 @@ class App extends React.Component {
     super(props);
     this.state = {
       startReady: false,
-      instaData: [],
       githubData: []
     }
     this.startReadyStart = this.startReadyStart.bind(this);
   }
 
   async componentDidMount() {
-    const fetchedInsta = await fetchInstaPictures();
     const fetchedGithub = await fetchGithubProjects();
-    this.setState({ instaData: fetchedInsta, githubData: fetchedGithub });
+    this.setState({ githubData: fetchedGithub });
   }
 
   startReadyStart() {
@@ -33,11 +31,8 @@ class App extends React.Component {
   }
 
   render() {
-    const { startReady, instaData, githubData } = this.state;
+    const { startReady, githubData } = this.state;
 
-    if (githubData !== undefined && githubData !== []) {
-      console.log(githubData);
-    }
     return (
       <div className="app">
         <nav className={ styles.nav }>
@@ -97,7 +92,7 @@ class App extends React.Component {
             <PageTitle title="About Me" />
           </Parallax.Layer>
           <Parallax.Layer offset={ 1 } speed={ 0.5 } style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
-            <About />
+            <About data={ githubData } />
           </Parallax.Layer>
 
           <Parallax.Layer offset={ 2 } speed={ 0.3 } style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>

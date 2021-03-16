@@ -1,0 +1,48 @@
+@import "./../../resources/vars.scss";
+
+$font: white;
+$accent: #cf352eff;
+
+.container {
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .repos_container {
+        @include glass;
+        max-width: 40%;
+        padding: 10px 20px 0 20px;
+        color: $font;
+
+        .information {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .lang {
+                color: $accent;
+                flex: 1;
+    
+                i {
+                    margin-left: 10px;
+                }
+            }
+            .links {                
+                i {
+                    margin-left: 10px;
+                    color: $font;
+                    transition: .3 ease;
+
+                    &:hover {
+                        color: $accent;
+                    }
+                }
+            }
+        }
+        
+    }
+}
