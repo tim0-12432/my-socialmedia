@@ -2,6 +2,8 @@ import styles from "./About.module.scss";
 import RepoElement from "./RepoElement";
 import FAQElement from "./FAQElement";
 
+import { faqs } from "./../../resources/faq-json";
+
 function About({ data }) {
 
     const repoElements = [];
@@ -14,7 +16,13 @@ function About({ data }) {
     return (
         <div className={ styles.container }>
             <div className={ styles.faq_container }>
-                <FAQElement />
+                {
+                    faqs.map((item) => {
+                        return (
+                            <FAQElement data={ item } />
+                        );
+                    })
+                }
             </div>
             <div className={ styles.repos_container }>
                 { repoElements }

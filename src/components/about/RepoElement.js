@@ -1,8 +1,6 @@
 import styles from "./About.module.scss";
 
 export default function RepoElement({ data }) {
-    console.log(data);
-
     return (
         <div key={ data.id }>
             <h3>{ data.name }</h3>

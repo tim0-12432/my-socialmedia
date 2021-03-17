@@ -1,10 +1,19 @@
 import Typewriter from "typewriter-effect";
+import React from "react";
 
+import useOnScreen from "./../../hooks/useOnScreen";
 import styles from "./Header.module.scss";
 
-function Header({ setStartReady }) {
+function Header({ setStartReady, setHeaderVisible }) {
+    const rRef = React.useRef();
+    const onScreen = useOnScreen(rRef, "0px");
+
+    React.useEffect(() => {
+        setHeaderVisible(onScreen);
+    }, [onScreen]);
+
     return (
-        <header className={ styles.header }>
+        <header className={ styles.header } ref={ rRef }>
             <h1><Typewriter onInit={(typewriter) => {
                 typewriter.typeString("Hi!").pauseFor(200).deleteAll()
                         .typeString("My name is Timo!").pauseFor(1500).deleteAll()

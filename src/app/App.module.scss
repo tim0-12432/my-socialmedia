@@ -29,11 +29,9 @@ html, body {
 
 
 .nav {
-    @include glass;
     position: fixed;
     z-index: 49;
     width: 100%;
-    background: rgba($color: white, $alpha: .1);
     border-radius: 0 !important;
     border: none !important;
 
@@ -50,10 +48,29 @@ html, body {
             box-shadow: none;
             background-color: transparent;
             font-size: 2vw;
+            position: relative;
+            overflow: hidden;
 
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba($color: white, $alpha: .3);
+                clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+                transform: translateX(-100%);
+                transition: .3s ease;
+        
+            }
             &:hover, &:focus {
                 box-shadow: 0 0 20px black;
                 background-color: rgba($color: white, $alpha: .2);
+
+                &::after {
+                    transform: translateX(100%);
+                }
             }
         }
     }
@@ -68,7 +85,30 @@ html, body {
     border: 3px solid white;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    transition: .3s ease;
 
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color: white, $alpha: .3);
+        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        transform: translateX(-100%);
+        transition: .3s ease;
+
+    }
+    &:hover, &:focus {
+        height: 6vw;
+        width: 6vw;
+
+        &::after {
+            transform: translateX(100%);
+        }
+    }
     i {
         font-size: 4.8vw;
         color: white;
@@ -87,6 +127,10 @@ html, body {
         height: 12vw;
         width: 12vw;
 
+        &:hover, &:focus {
+            height: 15vw;
+            width: 15vw;
+        }
         i {
             font-size: 10vw;
         }
