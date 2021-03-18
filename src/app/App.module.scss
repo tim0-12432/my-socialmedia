@@ -170,6 +170,9 @@ footer {
                 font-size: 5vw;
             }
         }
+        select {
+            display: none;
+        }
     }
     .arrowBtn {
         height: 12vw;
@@ -181,6 +184,11 @@ footer {
         }
         i {
             font-size: 10vw;
+        }
+    }
+    footer {
+        p {
+            opacity: 1;
         }
     }
 }
