@@ -15,7 +15,7 @@ function Header({ setStartReady, setHeaderVisible }) {
     return (
         <header className={ styles.header } ref={ rRef }>
             <h1><Typewriter onInit={(typewriter) => {
-                typewriter.typeString("Hi!").pauseFor(200).deleteAll()
+                typewriter.typeString("Hi!").pauseFor(2000).deleteAll()
                         .typeString("My name is Timo!").pauseFor(1500).deleteAll()
                         .typeString("Have a look at the pages down below!")
                         .callFunction(() => setStartReady())
