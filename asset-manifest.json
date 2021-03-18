@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/my-socialmedia/static/css/main.58e15b13.chunk.css",
+    "main.css": "/my-socialmedia/static/css/main.fd397ffc.chunk.css",
     "main.js": "/my-socialmedia/static/js/main.e4b7e35a.chunk.js",
     "main.js.map": "/my-socialmedia/static/js/main.e4b7e35a.chunk.js.map",
     "runtime-main.js": "/my-socialmedia/static/js/runtime-main.94cfcf7d.js",
@@ -8,7 +8,7 @@
     "static/js/2.661f95cd.chunk.js": "/my-socialmedia/static/js/2.661f95cd.chunk.js",
     "static/js/2.661f95cd.chunk.js.map": "/my-socialmedia/static/js/2.661f95cd.chunk.js.map",
     "index.html": "/my-socialmedia/index.html",
-    "static/css/main.58e15b13.chunk.css.map": "/my-socialmedia/static/css/main.58e15b13.chunk.css.map",
+    "static/css/main.fd397ffc.chunk.css.map": "/my-socialmedia/static/css/main.fd397ffc.chunk.css.map",
     "static/js/2.661f95cd.chunk.js.LICENSE.txt": "/my-socialmedia/static/js/2.661f95cd.chunk.js.LICENSE.txt",
     "static/media/discord.d42e6973.jpeg": "/my-socialmedia/static/media/discord.d42e6973.jpeg",
     "static/media/pattern.38a91b2f.png": "/my-socialmedia/static/media/pattern.38a91b2f.png",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.94cfcf7d.js",
     "static/js/2.661f95cd.chunk.js",
-    "static/css/main.58e15b13.chunk.css",
+    "static/css/main.fd397ffc.chunk.css",
     "static/js/main.e4b7e35a.chunk.js"
   ]
 }
