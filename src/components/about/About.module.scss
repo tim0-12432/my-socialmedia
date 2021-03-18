@@ -13,6 +13,7 @@ $accent2: #00ffe5;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: .5s ease;
 
     .faq_container {
         display: flex;
@@ -21,15 +22,15 @@ $accent2: #00ffe5;
         flex-direction: column;
         max-width: 60%;
         
-        div {
+        details {
             @include glass;
             padding: 10px 20px;
             color: $font;
             width: 100%;
             margin-bottom: 20px;
-            cursor: pointer;
             position: relative;
             overflow: hidden;
+            transition: .3s ease;
 
             &::after {
                 content: "";
@@ -49,7 +50,14 @@ $accent2: #00ffe5;
                     transform: translateX(100%);
                 }
             }
+            summary {
+                color: $font;
+                font-weight: 800;
+                outline: none;
+                cursor: pointer;
+            }
             p {
+                margin-left: 15px;
                 font-weight: 600;
                 text-shadow: 0 0 10px rgba($color: #000000, $alpha: .5);
 

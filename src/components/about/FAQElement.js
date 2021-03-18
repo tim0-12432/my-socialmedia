@@ -1,22 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 
 import styles from "./About.module.scss";
 
 export default function FAQElement({ data }) {
-    const [open, setOpen] = useState(false);
 
     return (
-        <div onClick={() => setOpen(!open)}>
-            <h3>{ data.question }</h3>
-            {   
-                open ?
+        <details>
+            <summary>{ data.question }</summary>
+            {
                 data.answers.map((item) => {
                     return (
                         <p key={ item + data.answers.indexOf(item) }>{ item }</p>
                     );
                 })
-                : null
             }
-        </div>
+        </details>
     )
 }

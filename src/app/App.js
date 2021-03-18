@@ -9,7 +9,8 @@ import Header from "../components/header/Header";
 import PageTitle from "../components/page/PageTitle";
 import About from "../components/about/About";
 import Social from "../components/social/Social";
-import { fetchInstaPictures, fetchGithubProjects } from "../api";
+import { fetchGithubProjects } from "../api";
+import { languageStrings as strings } from "../resources/languages/languageStrings";
 
 class App extends React.Component {
   constructor(props) {
@@ -35,7 +36,7 @@ class App extends React.Component {
   }
   setOnStartPage(bool) {
     const start = this.state.headerVisible && bool;
-    console.log(this.state.headerVisible, bool);
+    //console.log(this.state.headerVisible, bool);
     this.setState({ onStartPage: start });
   }
   setHeaderVisible(bool) {
@@ -43,16 +44,30 @@ class App extends React.Component {
   }
 
   render() {
-    const { startReady, onStartPage, headerVisible, githubData } = this.state;
+    const { startReady, onStartPage, githubData } = this.state;
 
     return (
       <div className="app">
-        <nav className={ styles.nav } style={{ background: onStartPage ? "transparent" : "rgba(255, 255, 255, .2)", backdropFilter: onStartPage ? "none" : "blur(20px)" }}>
+        <nav className={ styles.nav } style={{
+                          background: onStartPage ? "transparent" : "rgba(255, 255, 255, .2)",
+                          backdropFilter: onStartPage ? "none" : "blur(20px)",
+                          borderBottom: onStartPage ? "none" : "2px solid rgba(255, 255, 255, .1)"
+                      }}>
             <ul>
-                <li onClick={() => this.parallax.scrollTo(0)}>Start</li>
-                <li onClick={() => this.parallax.scrollTo(1)}>About Me</li>
-                <li onClick={() => this.parallax.scrollTo(2)}>Socialmedia</li>
+                <li onClick={() => this.parallax.scrollTo(0)}>{ strings.start }</li>
+                <li onClick={() => this.parallax.scrollTo(1)}>{ strings.about }</li>
+                <li onClick={() => this.parallax.scrollTo(2)}>{ strings.social }</li>
             </ul>
+
+            <select name="language" value={ strings.getLanguage() } onChange={ (e) => strings.setLanguage(e.currentTarget.value) }>
+              {
+                strings.getAvailableLanguages().map((item) => {
+                  return (
+                    <option value={ item }>{ item.toUpperCase() }</option>
+                  );
+                })
+              }
+            </select>
         </nav>
         <Parallax ref={ ref => this.parallax = ref } pages={ 3 } scrolling={ true }>
           <Parallax.Layer offset={ 0 } speed={ 0 }
@@ -97,17 +112,22 @@ class App extends React.Component {
           </Parallax.Layer>
 
           <Parallax.Layer offset={ 1 } speed={ 0.3 } style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
-            <PageTitle title="About Me" />
+            <PageTitle title={ strings.about } />
           </Parallax.Layer>
           <Parallax.Layer offset={ 1 } speed={ 0.5 } style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
             <About data={ githubData } />
           </Parallax.Layer>
 
           <Parallax.Layer offset={ 2 } speed={ 0.3 } style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
-            <PageTitle title="My Socialmedia" />
+            <PageTitle title={ strings.social } />
           </Parallax.Layer>
           <Parallax.Layer offset={ 2 } speed={ 0.5 } style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column" }}>
             <Social />
+          </Parallax.Layer>
+          <Parallax.Layer offset={ 2.45 } speed={ 0 } style={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", pointerEvents: "none" }}>
+            <footer>
+              <p>{ strings.copyright }</p>
+            </footer>
           </Parallax.Layer>
         </Parallax>
       </div>
