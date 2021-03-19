@@ -20,8 +20,14 @@ $accent2: #00ffe5;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        max-width: 60%;
+        flex: 1;
+        margin-right: 20px;
         
+        h2 {
+            color: $font;
+            margin-bottom: 20px;
+            font-size: 1.5vw;
+        }
         details {
             @include glass;
             padding: 10px 20px;
@@ -53,12 +59,14 @@ $accent2: #00ffe5;
             summary {
                 color: $font;
                 font-weight: 800;
+                font-size: 1.7vw;
                 outline: none;
                 cursor: pointer;
             }
             p {
-                margin-left: 15px;
+                margin-left: 2vw;
                 font-weight: 600;
+                font-size: 1.5vw;
                 text-shadow: 0 0 10px rgba($color: #000000, $alpha: .5);
 
                 &:nth-child(odd) {
@@ -72,17 +80,21 @@ $accent2: #00ffe5;
     }
     .repos_container {
         @include glass;
-        max-width: 40%;
+        max-width: 35%;
         max-height: 100%;
         padding: 10px 20px 0 20px;
         color: $font;
 
+        h3 {
+            font-size: 3vw;
+        }
         .information {
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-bottom: 10px;
+            font-size: 1vw;
             
             .lang {
                 color: $accent;
@@ -117,6 +129,16 @@ $accent2: #00ffe5;
 
         .faq_container {
             max-width: 100%;
+
+            details {
+                summary {
+                    font-size: 4.5vw;
+                }
+                p {
+                    margin-left: 4vw;
+                    font-size: 4vw;
+                }
+            }
         }
         .repos_container {
             display: none;

@@ -22,6 +22,7 @@ function About({ data }) {
     return (
         <div className={ styles.container } style={{ opacity: onScreen ? 1 : 0 }} ref={ rRef }>
             <div className={ styles.faq_container }>
+                <h2>{ strings.faq }</h2>
                 {
                     faqs[strings.getLanguage()].map((item) => {
                         return (
